@@ -1,0 +1,44 @@
+.mainDivStyle1 {
+    margin-left: 10px;
+}
+
+.mainDivStyle2 {
+    margin-top: 10px;
+}
+
+.buttonClass {
+    font-size: 24px;
+    width: 140px;
+    height: 50px;
+    border-width: 1px;
+    color: #fff;
+    border-color: #599bb3;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 10px 14px -7px #276873;
+    text-shadow: 0px 1px 0px #3d768a;
+    background: linear-gradient(#599bb3, #408c99);
+}
+
+.buttonClass:hover {
+    background: linear-gradient(#408c99, #599bb3);
+}
+
+input {
+    border: 1px solid #599bb3;
+    border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px; 
+        -khtml-border-radius: 3px;
+    outline: none; 
+    width:250px;
+    height:50px;
+    font-size: 24px;
+}
+
+body {
+    font-family: cursive;
+    background-color: #45848f;
+}

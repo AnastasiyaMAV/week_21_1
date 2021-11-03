@@ -4,8 +4,14 @@ const btnClearGif = document.getElementById("btnClearGif");
 
 let createGif = () => {
     let inputSearchGif = document.getElementById("inputSearchGif").value;
-    
-    fetch(`http://api.giphy.com/v1/gifs/search?q=${inputSearchGif}&api_key=Ab4l19iVbKayKoxKwD8vOJ8K3P7OZS8w&limit=5`)
+
+
+    if(inputSearchGif == ""){
+        Swal.fire('Пусто! Введите данные.');
+    }else{
+        let inputSearchGif1 = inputSearchGif.replace(/ +/g, ' ').trim();
+        document.getElementById("inputSearchGif").value = inputSearchGif1;
+        fetch(`http://api.giphy.com/v1/gifs/search?q=${inputSearchGif1}&api_key=Ab4l19iVbKayKoxKwD8vOJ8K3P7OZS8w&limit=5`)
         .then(response => response.json())
         .then(list => {
             //console.log(list);
@@ -23,6 +29,7 @@ let createGif = () => {
             }            
         })
         .catch(err => console.log(err));
+    }    
 }
 
 btnSearchGif.addEventListener("click", () => {
